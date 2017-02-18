@@ -30,9 +30,5 @@ export class NotificationComponent  {
         
     }
 
-    toggleNavigation(){
-        this.expanded = this.expanded == "collapsed" ? "expanded" : "collapsed";
-    }
-
  
 }
