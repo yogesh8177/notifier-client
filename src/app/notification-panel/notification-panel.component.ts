@@ -114,7 +114,7 @@ export class NotificationPanelComponent implements OnInit {
         localStorage.setItem("history",JSON.stringify(this.notifications));
     }
 
-    loadHistory(socketId): void{
+    loadHistory(socketId: any): void{
         let history: any;
 
         history = JSON.parse(localStorage.getItem("history"));
