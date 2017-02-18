@@ -11,16 +11,4 @@ e2e/**/*.js
 e2e/**/*.js.map
 _test-output
 _temp
-CHANGELOG.md
-karma-test-shim.js
-karma.conf.js
-LICENSE
-non-essential-files.txt
-non-essential-files.osx.txt
-protractor.config.js
-README.md
-tslint.json
-.travis.yml
-bs-config.json
-bs-config.e2e.json
-e2e/
+

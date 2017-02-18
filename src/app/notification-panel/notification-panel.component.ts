@@ -94,7 +94,7 @@ export class NotificationPanelComponent implements OnInit {
         notifier.on('disconnect', () => {
             this.onlineStatus = "offline";
         });
-        notifier.on('notification',(data) => {
+        notifier.on('notification',(data: any) => {
             console.log('notification: Job completed! '+data.jobID);
             this.updateNotification(data);
         });
