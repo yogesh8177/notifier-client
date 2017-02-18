@@ -1,0 +1,16 @@
+.notif{
+    position: relative;
+    width: 98% !important;
+    padding: 4px;
+    border-bottom: 1px solid black;
+}
+
+.notif-icon{
+    width: 20%;
+}
+
+.notif-details{
+    width: 90%;
+    padding: 3px;
+    font-family: sans-serif;
+}

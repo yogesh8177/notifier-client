@@ -1,0 +1,72 @@
+.notification-panel{
+    position: absolute;
+    background: #fff;
+    width:450px;
+    right: 0;
+    top:0;
+    box-shadow: 0px 0px 3px 3px #000;
+    min-height: 100%;
+    overflow-y: auto; 
+    height: auto;
+    z-index: 999;
+}
+
+.notification-panel header{
+    height: 38px;
+    box-shadow: 0px 0px 3px 3px #0abc07;
+}
+
+.notification-panel::after{
+    clear: right;
+    content: '';
+}
+
+.small{
+    font-size: small;
+}
+
+.badge{
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top:5px;
+    width: 20px;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+}
+
+
+.online-status{
+    width:38px;
+    float:right;
+    margin-top: 5px;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.slider{
+    position: absolute;
+    right:42px;
+    padding: 3px;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 3px red;
+    top:5px;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+       width: 100%;
+    }
+    button, input[type='text']{
+        width:100%;
+    }
+    .notification-panel{
+        min-height: 100%;
+        height:auto;
+    }
+    .form{
+        width:90%;
+    }
+}

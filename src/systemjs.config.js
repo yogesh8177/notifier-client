@@ -22,6 +22,8 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      "socket.io-client": "node_modules/socket.io-client/dist",
+      
 
       // other libraries
       'rxjs':                      'npm:rxjs',
@@ -34,6 +36,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      "socket.io-client": {
+        main: './socket.io.js'
       }
     }
   });
