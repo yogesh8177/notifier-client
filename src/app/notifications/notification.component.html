@@ -1,7 +1,11 @@
-<div class="notif" [@notifWidthTrigger] = "expanded" [@notifStatus] = "notif.status">
-    <!--<span class="notif-icon"></span> wanted to use icons, but decided against!-->
-    <span class="notif-details">        
-        <strong>{{notif.message}}</strong>
+<div class="notif"  [@notifStatus] = "notif.status" >
+    <span class="notif-icon" >
+        <md-icon *ngIf="notif.status == 'pending'" aria-label="Pending">assignment_late</md-icon>
+        <md-icon *ngIf="notif.status == 'failed'" aria-label="Failed ">error</md-icon>
+        <md-icon *ngIf="notif.status == 'finished'" aria-label="Completed ">check</md-icon>
+    </span>
+    <span class="notif-details" [@notifWidthTrigger] = "expanded">        
+        {{notif.message}} <span class="small-font">{{notif.finishTime}}</span>
     </span>
 
 </div>

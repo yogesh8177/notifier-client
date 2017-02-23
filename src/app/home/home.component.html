@@ -1,0 +1,31 @@
+<div class="primary">
+  <h2>Notifier App</h2>  
+</div>
+<notification-panel #panel></notification-panel>
+<div class="form">
+
+    <div class="card center">
+        <h3>Submit job</h3>
+        <input type="text" [(ngModel)] = "panel.tag" /><br> <label>Tag current job</label><br>
+        <label class="small">(Each job takes 3 seconds to complete!)</label><br><br>
+        <button (click)="panel.postAJob()">Submit job to run</button><br>
+        <label class="small"> (Click this button to submit dummy job!)</label><br><br>
+        <button (click)="panel.clearNotifications()">Clear notifications</button><br>
+        <label class="small"> (Click this button to clear notifications!)</label>
+    </div>
+    <br>
+    <div class="card">
+        <h3 class="center">Working of app</h3>
+        <ul class="points">
+            <li>Top right heading of the notification panel turns dark green when connected to server, turns red otherwise!</li>
+            <li>If you submit job and wait for 3 seconds before expanding notification panel, then you can see count of unseen notifications!</li>
+            <li>Once you expand the notification panel, unseen notification count becomes 0 and becomes invisible!</li>
+            <li>Click on notification panel to expand and/or collapse it!</li>
+            <li>Each job contains current time stamp as its ID</li>
+            <li>Color codes for notifications: <strong>Orange:</strong> job submitted and pending for completion, <strong>Green:</strong> job completed successfully, <strong>Red:</strong> job failed due to web app refresh!</li>
+            <li>Note that only currently submitted jobs can be stored in history, i.e after submitting a job or jobs for current session, if web app is refreshed, previous notifications are in history (LocalStorage)!</li>
+            <li>If a job is submitted and web page is refreshed before job completes, then after refresh that job notification will turn <strong>red</strong> denoting that job failed!</li>
+            <li>LocalStorage is used instead of session for old notification history!</li>
+        </ul>
+    </div>
+</div>

@@ -3,4 +3,5 @@ export interface notification{
     message: string;
     status: string;
     jobID: string;
+    finishTime: string;
 }

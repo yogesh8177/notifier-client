@@ -1,8 +1,7 @@
 .notif{
     position: relative;
-    width: 98% !important;
     padding: 4px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgrey;
 }
 
 .notif-icon{
@@ -10,7 +9,8 @@
 }
 
 .notif-details{
-    width: 90%;
+    width: 80%;
     padding: 3px;
-    font-family: sans-serif;
+    font-family: Raleway;
 }
+

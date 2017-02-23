@@ -13,7 +13,7 @@ export class SocketService{
         
     }
 
-    getSocket(){
+    getSocket(): any{
         this.socket = io(this.Url);
         return this.socket;
     }

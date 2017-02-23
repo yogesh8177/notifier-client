@@ -1,0 +1,26 @@
+.form{
+    width:1170px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.points li{
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+       width: 100%;
+    }
+    button, input[type='text']{
+        width:87%;
+    }
+    .notification-panel{
+        min-height: 100%;
+        height:auto;
+    }
+    .form{
+        width:87%;
+        margin-left: 0; 
+    }
+}

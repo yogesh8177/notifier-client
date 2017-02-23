@@ -6,9 +6,10 @@ import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class PostJobService {
-
-    Url: string = "http://148.72.250.212:3000/job";
-    header: Headers;
+    //148.72.250.212
+    //Url: string = "http://localhost:3000/job";
+    private Url: string = "http://148.72.250.212:3000/job";
+    private header: Headers;
 
     constructor(private http: Http){
         this.header = new Headers();

@@ -1,35 +1,17 @@
-<div class="form">
-    <input type="text" [(ngModel)] = "tag" /> <label>Tag current job</label><br>
-    <label class="small">(Each job takes 3 seconds to complete!)</label><br><br>
-    <button (click)="postAJob()">Submit Job to run</button>
-    <label class="small"> (Click this button to submit dummy job!)</label><br><br>
-    <button (click)="clearNotifications()">Clear notifications!</button>
-    <label class="small"> (Click this button to clear notifications!)</label>
 
-    <br>
-    <h3>Working of app</h3>
-    <ul>
-        <li>Top right heading of the notification panel turns dark green when connected to server, turns red otherwise!</li>
-        <li>If you submit job and wait for 3 seconds before expanding notification panel, then you can see count of unseen notifications!</li>
-        <li>Once you expand the notification panel, unseen notification count becomes 0 and becomes invisible!</li>
-        <li>Click on notification panel to expand and/or collapse it!</li>
-        <li>Each job contains current time stamp as its ID</li>
-        <li>Color codes for notifications: <strong>Orange:</strong> job submitted and pending for completion, <strong>Green:</strong> job completed successfully, <strong>Red:</strong> job failed due to web app refresh!</li>
-        <li>Note that only currently submitted jobs can be stored in history, i.e after submitting a job or jobs for current session, if web app is refreshed, previous notifications are in history (LocalStorage)!</li>
-        <li>If a job is submitted and web page is refreshed before job completes, then after refresh that job notification will turn <strong>red</strong> denoting that job failed!</li>
-        <li>LocalStorage is used instead of session for old notification history!</li>
-    </ul>
-</div>
-<div class="slider" (click)="toggleNavigation()" [@menuWidthTrigger]="expanded">{{expanded == "expanded" ? "Close" : "Open"}}</div>
+<div class="slider" (click)="toggleNavigation()" [@menuWidthTrigger]="expanded"><md-icon>list</md-icon></div>
 <div class="notification-panel" [@panelWidthTrigger]="expanded" >
 
-    <header [@onlineStatus]="onlineStatus">
-
+    <header (click)="toggleNavigation()">
+        <span class="online-status-icon" [@onlineStatus]="onlineStatus">
+            <span *ngIf="onlineStatus == 'online'"><md-icon>lightbulb_outline</md-icon></span>
+            <span *ngIf="onlineStatus == 'offline'"><md-icon>block</md-icon></span>
+        </span>
         <span class="badge" *ngIf="count != 0">{{count}}</span>
-        <div class="online-status"  *ngIf="expanded == 'expanded'"><strong>{{onlineStatus}}</strong></div>
+        <div class="online-status"  *ngIf="expanded == 'expanded'">{{statusMessages[onlineStatus]}}</div>
         <!--Indicator for connection is alive or suspended-->
     </header>
-    <br>
+
     <div class="notifications">
         <!--Notifications container-->
         <notification *ngFor="let n of notifications"
