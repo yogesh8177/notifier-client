@@ -12,10 +12,10 @@ import {SocketService} from "../services/socket.service";
   animations: [
       //Change color based on online status 
       trigger('onlineStatus', [
-          state('online', style({ background: "#63bc09", color:'#ecfc14', "box-shadow": "0px 0px 3px 3px green" })),
-          state('offline', style({ background: "red", color:'#ffcc00', "box-shadow": "0px 0px 3px 3px red"  })),
-          transition('online => offline', animate('200ms ease-in')),
-          transition('offline => online', animate('200ms 200ms ease-out'))
+          state("online", style({ background: "#63bc09", color:'#ecfc14', "box-shadow": "0px 0px 3px 3px green" })),
+          state("offline", style({ background: "red", color:'#ffcc00', "box-shadow": "0px 0px 3px 3px red"  })),
+          transition("online => offline", animate('200ms ease-in')),
+          transition("offline => online", animate('200ms 200ms ease-out'))
       ]),
       //Expand and collapse notification panel
       trigger('panelWidthTrigger', [
@@ -55,6 +55,7 @@ export class NotificationPanelComponent implements OnInit {
         this.tag = "This is a job";
         this.count = 0;
     }
+
     //Toggle notification panel: expand or collapse
     toggleNavigation(): void{
         this.expanded = this.expanded == "collapsed" ? "expanded" : "collapsed";

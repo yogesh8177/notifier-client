@@ -1,4 +1,4 @@
-<div class="notif"  [@notifStatus] = "notif.status" >
+<div class="notif"  [@notifStatus] = "notif.status" highlight>
     <span class="notif-icon" >
         <md-icon *ngIf="notif.status == 'pending'" aria-label="Pending">assignment_late</md-icon>
         <md-icon *ngIf="notif.status == 'failed'" aria-label="Failed ">error</md-icon>
