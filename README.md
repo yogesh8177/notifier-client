@@ -1,6 +1,6 @@
 # Angular notifier client
 
-Visit: [notifier.yogesh.tech](http://notifier.yogesh.tech) 
+Visit: [notifier.ysoftapps.in](http://notifier.ysoftapps.in) 
 
 1. ```npm install -g angular-cli```
 2. ```ng init --source-dir src``` (Do not override *.ts files)
